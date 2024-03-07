@@ -1,0 +1,1 @@
+from .hashTool import HashTool
