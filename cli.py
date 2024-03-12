@@ -1,6 +1,8 @@
 from typing_extensions import Annotated
 from typing import Optional
 
+from src import showBanner
+
 import typer
 
 
@@ -29,6 +31,7 @@ def callback(
         typer.Option("--version", "-v", help="Show the version and exit.", callback=version_callback, is_eager=True),
     ] = None):
     if ctx.invoked_subcommand is None:
+        showBanner()
         typer.echo(ctx.get_help())
 
 
