@@ -1,4 +1,5 @@
 from .terminalSize import get_terminal_size
+from minidevtools import YEAR, AUTHOR, VERSION
 
 from platform import system
 from time import sleep
@@ -7,12 +8,7 @@ from sys import stdout
 import random
 import os
 
-YEAR = 2024
-AUTHOR = "odest"
-VERSION = "0.0.1"
-NAME = "MiniDevTools"
-MAIL = "destrochloridium@gmail.com"
-PROJECT_URL = "https://github.com/odest/MiniDevTools"
+
 
 class Color:
     CRED2 = "\33[91m"
