@@ -2,7 +2,7 @@ from typing_extensions import Annotated
 from typing import Optional
 from enum import Enum
 
-from minidevtools import HashTool, VERSION, PROJECT_URL
+from minidevtools import HashTool, VERSION, PROJECT_URL, INFO_URL, check_update
 from src import showBanner
 
 import pyperclip
@@ -18,7 +18,8 @@ class HashAlgorithm(str, Enum):
 
 
 app = typer.Typer(
-    epilog=f"Check out the docs at {PROJECT_URL} for more details.",
+    help=f"> A new version is available at {PROJECT_URL}/releases.\n" if check_update(VERSION, INFO_URL) else "",
+    epilog=f"> Check out the docs at {PROJECT_URL} for more details.",
     rich_markup_mode="markdown",
     context_settings={"help_option_names": ["-h", "--help"]},
     add_completion=False)
