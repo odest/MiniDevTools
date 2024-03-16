@@ -1,25 +1,39 @@
-from .terminalSize import get_terminal_size
-from minidevtools import YEAR, AUTHOR, VERSION
+import os
+import random
+import dataclasses
 
-from platform import system
 from time import sleep
 from sys import stdout
+from platform import system
 
-import random
-import os
+from src.cli.utils.terminalsize import get_terminal_size
+from minidevtools import YEAR, AUTHOR, VERSION
 
 
-
+@dataclasses.dataclass
 class Color:
+    """A class containing color codes for terminal text."""
+
     CRED2 = "\33[91m"
     CBLUE2 = "\33[94m"
     CGREEN2 = "\033[32m"
     CYELLOW2 = "\033[93m"
-    CPURPLE2 = '\033[0;35m' 
+    CPURPLE2 = "\033[0;35m"
     CCYAN2 = "\033[36m"
     ENDC = "\033[0m"
 
-COLOR = random.choice([Color.CRED2, Color.CBLUE2, Color.CGREEN2, Color.CYELLOW2, Color.CPURPLE2, Color.CCYAN2, Color.ENDC])
+
+COLOR = random.choice(
+    [
+        Color.CRED2,
+        Color.CBLUE2,
+        Color.CGREEN2,
+        Color.CYELLOW2,
+        Color.CPURPLE2,
+        Color.CCYAN2,
+        Color.ENDC,
+    ]
+)
 
 XLARGE = f"""
 
@@ -73,8 +87,7 @@ SMALL = f"""
     """
 
 
-
-def __clearTerminal():
+def __clear_terminal():
     sys = system()
     if sys == "Windows":
         os.system("cls")
@@ -84,19 +97,19 @@ def __clearTerminal():
         os.system("clear")
 
 
+def show_banner():
+    __clear_terminal()
 
-def showBanner():
-    __clearTerminal()
+    terminal_width = get_terminal_size()[0]
+    banner = SMALL
 
-    terminalWidth = get_terminal_size()[0]
-
-    if terminalWidth >= 110:
+    if terminal_width >= 110:
         banner = XLARGE
-    elif 100 <= terminalWidth < 110:
+    elif 100 <= terminal_width < 110:
         banner = LARGE
-    elif 74 <= terminalWidth < 100:
+    elif 74 <= terminal_width < 100:
         banner = MEDIUM
-    elif terminalWidth < 74:
+    elif terminal_width < 74:
         banner = SMALL
 
     for col in banner:
