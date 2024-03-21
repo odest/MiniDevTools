@@ -2,19 +2,17 @@
 <img src="docs/logo.png" alt="logo" width="80" height="80"/>
 </p>
 
-<br> 
-
 <div align="center">
 
 MiniDevTools
 ===========================
 <h4> A Swiss Army Knife for Developers </h4>
 
-[![Documentation](https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat)](https://github.com/odest/iClock)
+[![Documentation](https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat)](https://github.com/odest/MiniDevTools)
 [![python](https://img.shields.io/badge/python-3.12.0-green)](https://www.python.org/downloads/release/python-3120/)
-[![tag](https://img.shields.io/badge/tag-v0.0.1-green)](https://github.com/odest/iClock)
-[![version](https://img.shields.io/badge/version-PreRelease-orange)](https://github.com/odest/iClock)
-[![license](https://img.shields.io/badge/License-GPLv3-blue?color=#4ec820)](https://github.com/odest/iClock?tab=GPL-3.0-1-ov-file#readme)
+[![tag](https://img.shields.io/badge/tag-v0.0.1-green)](https://github.com/odest/MiniDevTools)
+[![version](https://img.shields.io/badge/version-PreRelease-orange)](https://github.com/odest/MiniDevTools)
+[![license](https://img.shields.io/badge/License-GPLv3-blue?color=#4ec820)](https://github.com/odest/MiniDevTools?tab=GPL-3.0-1-ov-file)
 ---
 
 <br>
@@ -87,7 +85,8 @@ MiniDevTools is a developer tools project designed to empower users to manage th
 
    - **Multiple Hash Algorithms**: **HashTool** *supports a wide range of hash algorithms, giving you the flexibility to choose the one that suits your security requirements.*
 
-
+> [!IMPORTANT]
+> *Please be aware that* **MiniDevTools** *is currently in the development phase. As such, tools will be added gradually over time to enhance functionality and usability. We appreciate your patience and understanding as we work to bring you the best possible experience.*
 
 <br>
 
@@ -216,7 +215,7 @@ Usage: cli.py hash [OPTIONS]
 <br>
 
 ## License  
-- *This project is licensed under the* **GPL-3.0 License** - *see the* [LICENSE](https://github.com/odest/iClock?tab=GPL-3.0-1-ov-file) *file for details.*
+- *This project is licensed under the* **GPL-3.0 License** - *see the* [LICENSE](https://github.com/odest/MiniDevTools?tab=GPL-3.0-1-ov-file) *file for details.*
 
 
 <br>
@@ -225,5 +224,5 @@ Usage: cli.py hash [OPTIONS]
 ## 
 
 <div align="center">
-MiniDevTools - Empowering Developers Everywhere
+𝕸𝖎𝖓𝖎𝕯𝖊𝖛𝕿𝖔𝖔𝖑𝖘 - 𝕰𝖒𝖕𝖔𝖜𝖊𝖗𝖎𝖓𝖌 𝕯𝖊𝖛𝖊𝖑𝖔𝖕𝖊𝖗𝖘 𝕰𝖛𝖊𝖗𝖞𝖜𝖍𝖊𝖗𝖊
 </div>
