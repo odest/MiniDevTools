@@ -4,15 +4,14 @@ version = "0.0.1"
 description = "A Swiss Army knife for developers"
 authors = ["odest <destrochloridium@gmail.com>"]
 maintainers = ["odest <destrochloridium@gmail.com>"]
-license = "GPLv3"
 readme = "README.md"
 homepage = "https://github.com/odest/MiniDevTools"
-repository = "https://github.com/odest/MiniDevTools"
 documentation = "https://github.com/odest/MiniDevTools"
 keywords = ["Developers", "Tools"]
 packages = [{include = "minidevtools"}]
+requires-python = ">=3.8"
 classifiers = [
-    "Development Status ::  2 - Pre-Alpha",
+    "Development Status :: 2 - Pre-Alpha",
     "Environment :: Console",
     "Intended Audience :: Developers",
     'Intended Audience :: Education',
@@ -41,3 +40,14 @@ mdt = 'cli:app'
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.pylint.MASTER]
+disable = 'redefined-builtin'
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401", "F403"]
+
+[tool.pyright]
+reportArgumentType = false
+reportUnusedImport = false
+reportUnnecessaryComparison = false
