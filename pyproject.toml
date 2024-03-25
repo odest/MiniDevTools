@@ -35,7 +35,7 @@ requests = "^2.31.0"
 typing_extensions = "^4.10.0"
 
 [tool.poetry.scripts]
-mdt = 'cli:app'
+mdt = 'minidevtools.cli:app'
 
 [build-system]
 requires = ["poetry-core"]
@@ -50,4 +50,7 @@ disable = 'redefined-builtin'
 [tool.pyright]
 reportArgumentType = false
 reportUnusedImport = false
+reportMissingTypeStubs = false
+reportUnknownVariableType = false
+reportAttributeAccessIssue = false
 reportUnnecessaryComparison = false
