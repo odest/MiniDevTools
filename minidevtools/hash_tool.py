@@ -15,7 +15,7 @@ class HashTool:
     """
 
     @classmethod
-    def MD5(  # pylint: disable-msg=C0103, disable-msg=R1710
+    def MD5(
         cls,
         text: Optional[Union[str, bytes, int, float, bool]] = None,
         file: Optional[str] = None,
@@ -67,7 +67,7 @@ class HashTool:
                 return None
 
     @classmethod
-    def SHA1(  # pylint: disable-msg=C0103, disable-msg=R1710
+    def SHA1(
         cls,
         text: Optional[Union[str, bytes, int, float, bool]] = None,
         file: Optional[str] = None,
@@ -119,7 +119,7 @@ class HashTool:
                 return None
 
     @classmethod
-    def SHA256(  # pylint: disable-msg=C0103, disable-msg=R1710
+    def SHA256(
         cls,
         text: Optional[Union[str, bytes, int, float, bool]] = None,
         file: Optional[str] = None,
@@ -171,7 +171,7 @@ class HashTool:
                 return None
 
     @classmethod
-    def SHA512(  # pylint: disable-msg=C0103, disable-msg=R1710
+    def SHA512(
         cls,
         text: Optional[Union[str, bytes, int, float, bool]] = None,
         file: Optional[str] = None,

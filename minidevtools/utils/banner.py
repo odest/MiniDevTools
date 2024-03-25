@@ -6,8 +6,8 @@ from time import sleep
 from sys import stdout
 from platform import system
 
-from src.cli.utils.terminalsize import get_terminal_size
-from minidevtools import YEAR, AUTHOR, VERSION
+from .terminalsize import get_terminal_size
+from .config import AUTHOR, VERSION
 
 
 @dataclasses.dataclass
@@ -43,7 +43,7 @@ XLARGE = f"""
     {COLOR}██║╚██╔╝██║ ██║ ██║╚██╗██║ ██║ ██║  ██║ ██╔══╝   ╚██╗ ██╔╝    ██║    ██║   ██║ ██║   ██║ ██║      ╚════██║
     {COLOR}██║ ╚═╝ ██║ ██║ ██║ ╚████║ ██║ ██████╔╝ ███████╗  ╚████╔╝     ██║    ╚██████╔╝ ╚██████╔╝ ███████╗ ███████║
     {COLOR}╚═╝     ╚═╝ ╚═╝ ╚═╝  ╚═══╝ ╚═╝ ╚═════╝  ╚══════╝   ╚═══╝      ╚═╝     ╚═════╝   ╚═════╝  ╚══════╝ ╚══════╝
-                                                                        {Color.CCYAN2}© Copyright {YEAR}, {AUTHOR}. Version {VERSION}
+                                                                                {Color.CCYAN2}developed by {AUTHOR} | v{VERSION}
 
     """
 
@@ -56,7 +56,7 @@ LARGE = f"""
     {COLOR}██║╚██╔╝██║██║██║╚██╗██║██║██║  ██║██╔══╝  ╚██╗ ██╔╝   ██║   ██║   ██║██║   ██║██║     ╚════██║
     {COLOR}██║ ╚═╝ ██║██║██║ ╚████║██║██████╔╝███████╗ ╚████╔╝    ██║   ╚██████╔╝╚██████╔╝███████╗███████║
     {COLOR}╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═╝╚═════╝ ╚══════╝  ╚═══╝     ╚═╝    ╚═════╝  ╚═════╝ ╚══════╝╚══════╝
-                                                            {Color.CCYAN2}© Copyright {YEAR}, {AUTHOR}. Version {VERSION}
+                                                                    {Color.CCYAN2}developed by {AUTHOR} | v{VERSION}
     
     """
 
@@ -69,7 +69,7 @@ MEDIUM = f"""
     {COLOR}██║╚█╔╝██║██║ ██║██╔═╝  ╚██╗██╔╝   ██║   ██║ ██║██║ ██║██║    ╚═══██║
     {COLOR}██║ ╚╝ ██║█████╔╝██████╗ ╚███╔╝    ██║   ╚████╔╝╚████╔╝██████╗██████║
     {COLOR}╚═╝    ╚═╝╚════╝ ╚═════╝  ╚══╝     ╚═╝    ╚═══╝  ╚═══╝ ╚═════╝╚═════╝
-                                    {Color.CCYAN2}© Copyright {YEAR}, {AUTHOR}. Version {VERSION}
+                                        {Color.CCYAN2}developed by {AUTHOR} | v{VERSION}
 
     """
 
@@ -82,7 +82,7 @@ SMALL = f"""
     {COLOR}██║╚██╔╝██║  ██║  ██║     ██║   
     {COLOR}██║ ╚═╝ ██║  ██████╔╝     ██║   
     {COLOR}╚═╝     ╚═╝  ╚═════╝      ╚═╝   
-    {Color.CCYAN2}© {YEAR}, {AUTHOR}. Version {VERSION}
+    {Color.CCYAN2}developed by {AUTHOR} | v{VERSION}
 
     """
 

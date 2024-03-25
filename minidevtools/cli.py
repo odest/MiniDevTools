@@ -1,13 +1,13 @@
 """CLI"""
 
 from enum import Enum
-from typing import Optional
-from typing_extensions import Annotated
+from typing import Optional, Annotated
 
 import typer
 
-from minidevtools import HashTool, check_update, VERSION, PROJECT_URL, INFO_URL
-from src import show_banner
+from .hash_tool import HashTool
+from .utils import VERSION, PROJECT_URL, INFO_URL
+from .utils import show_banner, check_update
 
 
 class HashAlgorithm(str, Enum):
@@ -30,10 +30,13 @@ class HashAlgorithm(str, Enum):
 
 
 app = typer.Typer(
-    help=f"> A new version is available at {PROJECT_URL}/releases.\n"
-    if check_update(VERSION, INFO_URL)
-    else "",
-    epilog=f"> Check out the docs at {PROJECT_URL} for more details.",
+    help="A Swiss Army Knife for Developers",
+    epilog=f"""
+    > For help with a specific command, see: `mdt <command> --help`.
+    \n
+    \n
+    > Check out the docs at {PROJECT_URL} for more details.
+    """,
     rich_markup_mode="markdown",
     context_settings={"help_option_names": ["-h", "--help"]},
     add_completion=False,
@@ -41,13 +44,13 @@ app = typer.Typer(
 
 
 @app.command(help="Hash texts or files with MD5, SHA1, SHA256, SHA512")
-def hash(  # pylint: disable=redefined-builtin
+def hash(
     text: Annotated[
         str, typer.Option("--text", "-t", help="Text to be hashed.")
-    ] = None,  # type: ignore
+    ] = None,
     file: Annotated[
         str, typer.Option("--file", "-f", help="File to be hashed.")
-    ] = None,  # type: ignore
+    ] = None,
     algorithm: Annotated[
         HashAlgorithm,
         typer.Option(
@@ -71,8 +74,8 @@ def hash(  # pylint: disable=redefined-builtin
         algorithm (HashAlgorithm, optional): The hashing algorithm to use.
             Defaults to SHA256.
     """
-    if (text is None and file is None) or (  # type: ignore
-        text is not None and file is not None  # type: ignore
+    if (text is None and file is None) or (
+        text is not None and file is not None
     ):
         typer.secho(
             "Provide either --text or --file, not both or neither.", fg="red"
@@ -111,7 +114,15 @@ def version_callback(value: bool):
                     the version and exits.
     """
     if value:
-        print(f"MiniDevTools: v{VERSION}")
+        typer.echo(f"MiniDevTools: v{VERSION}")
+
+        latest_version = check_update(VERSION, INFO_URL)
+        if latest_version is not None:
+            typer.secho(
+                f"A new release of mdt is available: v{VERSION} -> v{latest_version}\nTo upgrade, run: pip install minidevtools --upgrade",
+                fg="green",
+            )
+
         raise typer.Exit()
 
 
@@ -149,6 +160,13 @@ def callback(
     if ctx.invoked_subcommand is None:
         show_banner()
         typer.echo(ctx.get_help())
+
+        latest_version = check_update(VERSION, INFO_URL)
+        if latest_version is not None:
+            typer.secho(
+                f"A new release of mdt is available: v{VERSION} -> v{latest_version}\nTo upgrade, run: pip install minidevtools --upgrade",
+                fg="green",
+            )
 
 
 if __name__ == "__main__":

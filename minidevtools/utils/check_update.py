@@ -49,7 +49,7 @@ def get_latest_version(url: str) -> str | None:
         return None
 
 
-def check_update(current_version: str, update_url: str) -> bool | None:
+def check_update(current_version: str, update_url: str) -> str | None:
     """Checks for a newer version of software available at the provided URL.
 
     Args:
@@ -63,8 +63,9 @@ def check_update(current_version: str, update_url: str) -> bool | None:
 
     if is_internet_connected():
         latest_version = get_latest_version(update_url)
-        if latest_version is not None:
-            return version.parse(current_version) < version.parse(
-                latest_version
-            )
+        if latest_version is not None and version.parse(
+            current_version
+        ) < version.parse(latest_version):
+            return latest_version
+        return None
     return None
