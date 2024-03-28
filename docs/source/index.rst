@@ -66,3 +66,6 @@ Features
 
 .. toctree::
    :maxdepth: 2
+   :caption: Quickstart
+
+   installation
