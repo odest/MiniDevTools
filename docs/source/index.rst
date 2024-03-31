@@ -69,3 +69,4 @@ Features
    :caption: Quickstart
 
    installation
+   usage
