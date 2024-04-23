@@ -1,5 +1,5 @@
 <p align="center">
-<img src="docs/logo.png" alt="logo" width="80" height="80"/>
+<img src="https://raw.githubusercontent.com/odest/MiniDevTools/master/docs/source/_static/logo.png" alt="logo" width="80" height="80"/>
 </p>
 
 <div align="center">
@@ -8,10 +8,10 @@ MiniDevTools
 ===========================
 <h4> A Swiss Army Knife for Developers </h4>
 
-[![Documentation](https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat)](https://github.com/odest/MiniDevTools)
+[![Documentation](https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat)](https://minidevtools.readthedocs.io/en/latest/index.html#)
 [![python](https://img.shields.io/badge/python-3.12.0-green)](https://www.python.org/downloads/release/python-3120/)
-[![tag](https://img.shields.io/badge/tag-v0.0.1-green)](https://github.com/odest/MiniDevTools)
-[![version](https://img.shields.io/badge/version-PreRelease-orange)](https://github.com/odest/MiniDevTools)
+[![tag](https://img.shields.io/badge/tag-v0.0.1-green)](https://github.com/odest/MiniDevTools/tags)
+[![version](https://img.shields.io/badge/version-PreRelease-orange)](https://github.com/odest/MiniDevTools/releases)
 [![license](https://img.shields.io/badge/License-GPLv3-blue?color=#4ec820)](https://github.com/odest/MiniDevTools?tab=GPL-3.0-1-ov-file)
 ---
 
@@ -27,7 +27,7 @@ MiniDevTools is a developer tools project designed to empower users to manage th
 
 <center>
 
-![banner](docs/banner.png)
+![banner](https://raw.githubusercontent.com/odest/MiniDevTools/master/docs/source/_static/banner.png)
 
 </center>
 
@@ -40,10 +40,13 @@ MiniDevTools is a developer tools project designed to empower users to manage th
 - [Tools](#tools)
   - [1. HashTool](#1-hashtool)
 - [Installation](#installation)
+  - [From PyPI](#from-pypi)
+  - [From Source](#from-source)
 - [Usage](#usage)
   - [1. As a Package](#1-as-a-package)
   - [2. Command Line Interface (CLI)](#2-command-line-interface-cli)
   - [3. Graphical User Interface (GUI)](#3-graphical-user-interface-gui)
+- [Documentation](#documentation)
 - [License](#license)
 
 
@@ -92,27 +95,37 @@ MiniDevTools is a developer tools project designed to empower users to manage th
 
 ## Installation
 
+### From PyPI
 
-*To install* **MiniDevTools** *from* **source**, *follow these steps:*
+*To install* **MiniDevTools** *from* **[PyPI](https://pypi.org/project/minidevtools)**, *simply use the following command:*
 
-1. *Clone the repository:*
+```bash
+  pip install minidevtools
+```
 
-    ```bash
-    git clone https://github.com/odest/MiniDevTools.git
-    ```
+<br>
 
-2. *Navigate to the* **MiniDevTools** *directory:*
+### From Source
 
-    ```bash
-    cd MiniDevTools
-    ```
+*To install* **MiniDevTools** *from* **[Source](https://github.com/odest/MiniDevTools/archive/refs/heads/master.zip)**, *follow these steps:*
 
-3. *Install the required dependencies using* **pip:**
+1. Clone the repository:
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+  ```bash
+  git clone https://github.com/odest/MiniDevTools.git
+  ```
 
+2. Navigate to the **MiniDevTools** directory:
+
+  ```bash
+  cd MiniDevTools
+  ```
+
+3. Install the package with using *pip:*
+
+  ```bash
+  pip install .
+  ```
 
 <br>
 
@@ -149,51 +162,25 @@ print("Hashed file with SHA256:", hash_file)
 
 ### 2. Command Line Interface (CLI)
 
-> [!NOTE]
-> *The project is currently not uploaded to PyPI, so it is used in the following manner.*
-
-<br>
-
 *Utilize* **MiniDevTools** *via the* **Command Line Interface (CLI)** *for quick and efficient tasks. Execute the CLI script as follows:*
 
 ```bash
-python cli.py
+mdt
 ```
 
 <br>
 
-```
-Usage: cli.py [OPTIONS] COMMAND [ARGS]...
+<table>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/odest/MiniDevTools/master/docs/source/_static/cli-1.png" alt="cli-1" width = 640px height = 360px></td>
+    <td><img src="https://raw.githubusercontent.com/odest/MiniDevTools/master/docs/source/_static/cli-2.png" alt="cli-2" width = 640px height = 360px></td>
+   </tr> 
+</table>
 
-╭─ Options ───────────────────────────────────────────────────────────────╮
-│ --version  -v        Show the version and exit.                         │
-│ --help     -h        Show this message and exit.                        │
-╰─────────────────────────────────────────────────────────────────────────╯
 
-╭─ Commands ──────────────────────────────────────────────────────────────╮
-│ hash  Hash texts or files with MD5, SHA1, SHA256, SHA512                │
-╰─────────────────────────────────────────────────────────────────────────╯
+> [!NOTE]
+> *See the* [Documentation](https://minidevtools.readthedocs.io/en/latest/index.html#) *for details.*
 
- ▌ Check out the docs at https://github.com/odest/MiniDevTools for more details.
-```
-
-<br>
-
-```
-Usage: cli.py hash [OPTIONS]
-
- Hash texts or files with MD5, SHA1, SHA256, SHA512
-
-╭─ Options ───────────────────────────────────────────────────────────────────────╮
-│ --text      -t      TEXT                      Text to be hashed.                │
-│                                               [default: None]                   │
-│ --file      -f      TEXT                      File to be hashed.                │
-│                                               [default: None]                   │
-│ --algoritm  -a      [md5|sha1|sha256|sha512]  Hashing algorithm to be used.     │
-│                                               [default: HashAlgorithm.SHA256]   │
-│ --help      -h                                Show this message and exit.       │
-╰─────────────────────────────────────────────────────────────────────────────────╯
-```
 
 *This allows you to access* **MiniDevTools**' *features directly from the command line.*
 
@@ -203,6 +190,16 @@ Usage: cli.py hash [OPTIONS]
 
 *Experience* **MiniDevTools'** *capabilities through the* **Graphical User Interface (GUI)** *for a user-friendly interaction. Launch the GUI to access its functionalities effortlessly.*
 
+*Here is a concept gui design:*
+
+
+<center>
+
+![gui](https://raw.githubusercontent.com/odest/MiniDevTools/master/docs/source/_static/gui.png)
+
+</center>
+
+
 
 > [!NOTE]
 > *The GUI option is currently under development and will be available soon.*
@@ -211,6 +208,15 @@ Usage: cli.py hash [OPTIONS]
 <br>
 
 *Choose the option that best suits your workflow and preferences to make the most out of* **MiniDevTools.**
+
+<br>
+
+
+## Documentation
+
+*This project's detailed documentation can be found on our documentation website. Here, you'll find comprehensive information about the project's architecture, usage instructions, API reference, and much more.*
+
+*Please visit [our documentation website](https://minidevtools.readthedocs.io/en/latest/index.html#) to explore the complete documentation for this project.*
 
 <br>
 
@@ -224,5 +230,5 @@ Usage: cli.py hash [OPTIONS]
 ## 
 
 <div align="center">
-𝕸𝖎𝖓𝖎𝕯𝖊𝖛𝕿𝖔𝖔𝖑𝖘 - 𝕰𝖒𝖕𝖔𝖜𝖊𝖗𝖎𝖓𝖌 𝕯𝖊𝖛𝖊𝖑𝖔𝖕𝖊𝖗𝖘 𝕰𝖛𝖊𝖗𝖞𝖜𝖍𝖊𝖗𝖊
+MiniDevTools - Empowering Developers Evernwhere
 </div>
