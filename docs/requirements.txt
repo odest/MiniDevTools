@@ -3,10 +3,3 @@ packaging>=24.0
 requests>=2.31.0
 furo
 sphinx
-sphinx-markdown-tables==0.0.17
-sphinx-intl
-sphinx-autoapi
-sphinx-copybutton
-sphinx_design
-commonmark==0.9.1
-recommonmark==0.5.0

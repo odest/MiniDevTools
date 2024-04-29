@@ -20,19 +20,7 @@ release = "0.0.1"
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-source_parsers = {
-    ".md": "recommonmark.parser.CommonMarkParser",
-}
-source_suffix = [".rst", ".md"]
-extensions = [
-    "autoapi.extension",
-    "recommonmark",
-    "sphinx_markdown_tables",
-    "sphinx.ext.extlinks",
-    "sphinx.ext.autosectionlabel",  # To make easy intra-page links: :ref:`Title`
-    "sphinx_copybutton",
-    "sphinx_design",
-]
+extensions = []
 
 templates_path = ["_templates"]
 exclude_patterns = []
