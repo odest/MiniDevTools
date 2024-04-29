@@ -33,39 +33,17 @@ Utilize MiniDevTools via the Command Line Interface (CLI) for quick and efficien
 
 .. code-block:: bash
 
-    mdt --help
+    mdt
 
-.. code-block:: bash
+.. raw:: html
 
-    Usage: mdt [OPTIONS] COMMAND [ARGS]...
+    <table>
+        <tr>
+            <td><img src="./_static/cli-1.png" alt="cli-1" width = 640px height = 360px></td>
+            <td><img src="./_static/cli-2.png" alt="cli-2" width = 640px height = 360px></td>
+        </tr> 
+    </table>
 
-    ╭─ Options ────────────────────────────────────────────────────────────────────────╮
-    │ --version  -v        Show the version and exit.                                  │
-    │ --help     -h        Show this message and exit.                                 │
-    ╰──────────────────────────────────────────────────────────────────────────────────╯
-
-    ╭─ Commands ───────────────────────────────────────────────────────────────────────╮
-    │ hash  Hash texts or files with MD5, SHA1, SHA256, SHA512                         │
-    ╰──────────────────────────────────────────────────────────────────────────────────╯
-
-    ▌ For help with a specific command, see: mdt <command> --help.
-    ▌ Check out the docs at https://github.com/odest/MiniDevTools for more details.
-
-.. code-block:: bash
-
-    Usage: mdt hash [OPTIONS]
-
-    Hash texts or files with MD5, SHA1, SHA256, SHA512
-
-    ╭─ Options ───────────────────────────────────────────────────────────────────────╮
-    │ --text      -t      TEXT                      Text to be hashed.                │
-    │                                               [default: None]                   │
-    │ --file      -f      TEXT                      File to be hashed.                │
-    │                                               [default: None]                   │
-    │ --algoritm  -a      [md5|sha1|sha256|sha512]  Hashing algorithm to be used.     │
-    │                                               [default: HashAlgorithm.SHA256]   │
-    │ --help      -h                                Show this message and exit.       │
-    ╰─────────────────────────────────────────────────────────────────────────────────╯
 
 This allows you to access MiniDevTools' features directly from the command line.
 
@@ -73,6 +51,14 @@ Graphical User Interface (GUI)
 -------------------------------
 
 Experience MiniDevTools' capabilities through the Graphical User Interface (GUI) for a user-friendly interaction. Launch the GUI to access its functionalities effortlessly.
+Here is a concept gui design:
+
+.. raw:: html
+
+    <p align="center">
+        <img src="./_static/gui.png" alt="Interface">
+    </p>
+
 
 .. admonition:: Note
 	
