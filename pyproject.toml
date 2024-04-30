@@ -6,7 +6,7 @@ authors = ["odest <destrochloridium@gmail.com>"]
 maintainers = ["odest <destrochloridium@gmail.com>"]
 readme = "README.md"
 homepage = "https://github.com/odest/MiniDevTools"
-documentation = "https://github.com/odest/MiniDevTools"
+documentation = "https://minidevtools.readthedocs.io/en/latest/"
 keywords = ["Developers", "Tools"]
 packages = [{include = "minidevtools"}]
 requires-python = ">=3.8"
